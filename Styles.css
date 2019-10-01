@@ -1,0 +1,79 @@
+html { 
+  background: url(images/BackgroundPhoto.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p
+{
+	color: black;
+	font-family: times new roman;
+	font-size: 16px;
+}
+
+h1
+{
+	color: black;
+	font-family: cambria;
+	font-size: 30px;
+}
+	
+h2
+{
+	color: black;
+	font-family: cambria;
+	font-size: 25px
+}
+
+#container
+{
+	background-color:yellow;
+	border:2px solid black;
+	width:960px;
+	height:912px;
+	margin:auto;
+	
+}
+
+#header
+{
+	text-align: center;
+	border:2px solid black;
+	background-color:#02c01b;
+	height:130px;
+}
+
+#menu
+{
+	border:2px solid black;
+	background-color:#02c01b;
+	float:left;
+	height:720px;
+	width:140px;
+}
+
+#main
+{
+	border:2px solid black;
+	background-color:#02c01b;
+	float:left;
+	height:700px;
+	width:792px;
+	padding:10px;
+}
+
+#footer
+{
+	border:2px solid black;
+	background-color:#02c01b;
+	clear:both;
+	height:50px;
+	text-align: center;
+}
+
+.FloatRight
+{
+	Float: Right;
+}	
