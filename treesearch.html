@@ -1,5 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<?php
+	$message = "";
+	if(isset($_POST['submit']))
+	{ //check if form was submitted
+		$tree = $_POST['tree'];
+		$message = "".$tree." exists!";
+	}	
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,6 +26,7 @@
 			<div id="main">
 				<h1><u><b>Tree Search</b></u></h1>
 				<p>This page is allowing searching for trees</p>
+				<?php echo $message; ?>
 				<form id = "bookingform"> <!-- This form is used for the user to create a booking-->
 					<h3>Tree: <input type="text" name="tree"><br>
 					Min Price: <input type="text" name="price"><br>
