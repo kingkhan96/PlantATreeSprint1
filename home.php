@@ -16,13 +16,13 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<a href="Index.html"><img src="Images/Banner.jpg" width="956" height="130" alt="Banner" /></a>
+				<a href="Index.html"><img src="images/Banner.jpg" width="956" height="130" alt="Banner" /></a>
 			</div><!--header-->
 			<div id="menu">
-				<a href="home.php"><img src="Images/Home.jpg" width="140" height="180" alt="Home" /></a>
-				<a href="treesearch.php"><img src="Images/treesearch.jpg" width="140" height="180" alt="treesearch" /></a>
-				<a href="findafriend.php"><img src="Images/findafriend.jpg" width="140" height="180" alt="findafriend" /></a>
-				<a href="fill.php"><img src="Images/fill.jpg" width="140" height="180" alt="Top 10" /></a>
+				<a href="home.php"><img src="images/Home.jpg" width="140" height="180" alt="Home" /></a>
+				<a href="treesearch.php"><img src="images/treesearch.jpg" width="140" height="180" alt="treesearch" /></a>
+				<a href="findafriend.php"><img src="images/findafriend.jpg" width="140" height="180" alt="findafriend" /></a>
+				<a href="fill.php"><img src="images/fill.jpg" width="140" height="180" alt="Top 10" /></a>
 			</div><!--menu-->
 			<div id="main">
 				<h1><u><b>Plant A Tree</b></u></h1>
