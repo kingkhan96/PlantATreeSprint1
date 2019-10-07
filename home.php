@@ -29,6 +29,16 @@
 					}
 					else
 					{
+						if(isset($_POST['register']))
+						{
+							$username = $_POST['username'];
+							$password = $_POST['password'];	
+							$street = $_POST['street'];
+							$city = $_POST['city'];
+							$postcode = $_POST['postcode'];
+							$phone = $_POST['phone'];
+							$message = "You have registered an account succesfully, please login below ".$username;
+						}
 						echo "<h1>Login</h1>";
 						echo "<form action = '' method ='post'>";
 						echo "<h3>Username: <input type='text' name='username'><br>";
