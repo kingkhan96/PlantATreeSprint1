@@ -24,7 +24,7 @@
           				City: <input type='text' name='city'><br>
             				Postcode: <input type='text' name='postcode'><br>
             				Phone: <input type='text' name='phone'><br></h3>
-					<input type='register' name='register'>
+					<input type='submit' name='register'>
 				</form>
 				<a href='register.php'><p>register for an account here</p></a>
 			</div><!--main-->
