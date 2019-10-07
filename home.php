@@ -16,7 +16,7 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<a href="Index.html"><img src="images/Banner.jpg" width="956" height="130" alt="Banner" /></a>
+				<a href="home.php"><img src="images/Banner.jpg" width="956" height="130" alt="Banner" /></a>
 			</div><!--header-->
 			<div id="menu">
 				<a href="home.php"><img src="images/Home.jpg" width="140" height="180" alt="Home" /></a>
@@ -27,13 +27,25 @@
 			<div id="main">
 				<h1><u><b>Plant A Tree</b></u></h1>
 				<p>This is a website is in testing that allows the purchase of trees through an account.</p>
-				<h1>Login</h1>
-				<?php echo $message; ?>
-				<form action = "" method ="post">
-					<h3>Username: <input type="text" name="username"><br>
-						Password: <input type="text" name="password"><br>
-					<input type="submit" name="submit">
-				</form>
+				<?php
+					$message = "";
+					if(isset($_POST['submit']))
+					{ //check if form was submitted
+						$username = $_POST['username'];
+						$password = $_POST['password'];
+						$message = "You have logged in succesfully, welcome back ".$username;
+					}
+					else
+					}
+						echo "<h1>Login</h1>";
+						echo $message; 
+						echo "<form action = '' method ='post'>";
+						echo "<h3>Username: <input type='text' name='username'><br>";
+						echo "Password: <input type='text' name='password'><br>";
+						echo "<input type='submit' name='submit'>";
+						echo "</form>" ;
+						echo "<a href='register.php'><p>register for an account here</p></a>";
+				?>	
 			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
