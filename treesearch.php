@@ -21,7 +21,7 @@
 				<?php
 					if(isset($_POST['submit']))
 					{
-						$tree = $_POST['tree']
+						$tree = $_POST['tree'];
 						echo "We have found 1 result: ".$tree."<br>";
 						echo "<a href='treesearch.php'>Click here to search for a different tree</a>";
 					}
