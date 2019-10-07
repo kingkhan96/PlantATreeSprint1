@@ -18,17 +18,15 @@
 			<div id="main">
 				<h1>Login</h1>
 				<form action = 'home.php' method ='post'>
-						<h3>Username: <input type='text' name='username'><br>
-						Password: <input type='text' name='password'><br>
-            Street line: <input type='text' name='street'><br>
-            City: <input type='text' name='city'><br>
-            Postcode: <input type='text' name='postcode'><br>
-            Phone: <input type='text' name='phone'><br></h3>
-						<input type='register' name='register'>
-						</form>
-						<a href='register.php'><p>register for an account here</p></a>
-					}
-				?>	
+					<h3>Username: <input type='text' name='username'><br>
+					Password: <input type='text' name='password'><br>
+           				Street line: <input type='text' name='street'><br>
+          				City: <input type='text' name='city'><br>
+            				Postcode: <input type='text' name='postcode'><br>
+            				Phone: <input type='text' name='phone'><br></h3>
+					<input type='register' name='register'>
+				</form>
+				<a href='register.php'><p>register for an account here</p></a>
 			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
