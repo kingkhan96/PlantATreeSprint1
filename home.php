@@ -1,12 +1,3 @@
-<?php
-	$message = "";
-	if(isset($_POST['submit']))
-	{ //check if form was submitted
-		$username = $_POST['username'];
-		$password = $_POST['password'];
-		$message = "You have logged in succesfully, welcome back ".$username;
-	}	
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,17 +25,18 @@
 						$username = $_POST['username'];
 						$password = $_POST['password'];
 						$message = "You have logged in succesfully, welcome back ".$username;
+						echo $message; 
 					}
 					else
-					}
+					{
 						echo "<h1>Login</h1>";
-						echo $message; 
 						echo "<form action = '' method ='post'>";
 						echo "<h3>Username: <input type='text' name='username'><br>";
 						echo "Password: <input type='text' name='password'><br>";
 						echo "<input type='submit' name='submit'>";
 						echo "</form>" ;
 						echo "<a href='register.php'><p>register for an account here</p></a>";
+					}
 				?>	
 			</div><!--main-->
 			<div id="footer">
