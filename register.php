@@ -26,7 +26,6 @@
             				Phone: <input type='text' name='phone'><br></h3>
 					<input type='submit' name='register'>
 				</form>
-				<a href='register.php'><p>register for an account here</p></a>
 			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
