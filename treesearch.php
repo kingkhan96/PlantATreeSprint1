@@ -33,7 +33,8 @@
 						echo "Min Growth rate: <input type='text' name='growth'><br>";
 						echo "Condition: <input type='radio' name='condition' value='grass' checked='checked'>Grass";
 						echo "<input type='radio' name='condition' value='sand'>Sand </br>"; 
-						echo "Category: <input type='radio' name='category' value='tree' checked='checked'>Tree";						echo "<input type='radio' name='category' value='bush'>Bush </br>"
+						echo "Category: <input type='radio' name='category' value='tree' checked='checked'>Tree";						
+						echo "<input type='radio' name='category' value='bush'>Bush </br>";
 						echo "<input type='submit' name='submit'></h3>";
 						echo "</form>";
 					}
