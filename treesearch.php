@@ -1,11 +1,3 @@
-<?php
-	$message = "";
-	if(isset($_POST['submit']))
-	{ //check if form was submitted
-		$tree = $_POST['tree'];
-		$message = "".$tree." exists!";
-	}	
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,17 +18,26 @@
 			<div id="main">
 				<h1><u><b>Tree Search</b></u></h1>
 				<p>This page is allowing searching for trees</p>
-				<?php echo $message; ?>
-				<form id = "bookingform"> <!-- This form is used for the user to create a booking-->
-					<h3>Tree: <input type="text" name="tree"><br>
-					Min Price: <input type="text" name="price"><br>
-					Min Growth rate: <input type="text" name="growth"><br>
-					Condition: <input type="radio" name="condition" value="grass" checked="checked">Grass
-					<input type="radio" name="condition" value="sand">Sand </br> 
-					Category: <input type="radio" name="category" value="tree" checked="checked">Tree
-					<input type="radio" name="category" value="bush">Bush </br>
-					<input type="button" name="search" value="search"></h3>
-				</form>
+				<?php
+					if(isset($_POST['submit']))
+					{
+						$tree = $_POST['tree']
+						echo "We have found 1 result: ".$tree."<br>";
+						echo "<a href='treesearch.php'>Click here to search for a different tree</a>";
+					}
+					else
+					{
+						echo "<form action='' method='post'>";
+						echo "<h3>Tree: <input type='text' name='tree'><br>";
+						echo "Min Price: <input type='text' name='price'><br>";
+						echo "Min Growth rate: <input type='text' name='growth'><br>";
+						echo "Condition: <input type='radio' name='condition' value='grass' checked='checked'>Grass";
+						echo "<input type='radio' name='condition' value='sand'>Sand </br>"; 
+						echo "Category: <input type='radio' name='category' value='tree' checked='checked'>Tree";						echo "<input type='radio' name='category' value='bush'>Bush </br>"
+						echo "<input type='submit' name='submit'></h3>";
+						echo "</form>";
+					}
+				?>
 			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
