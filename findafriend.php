@@ -19,9 +19,9 @@
 				<h1><u><b>Find a friend</b></u></h1>
 				<p>You can insert a username of someone you know and we will search if they are in our system.</p>
 				<?php
-					if(isset($_POST['submit']))
+					if(isset($_GET['submit']))
 					{ //check if form was submitted
-						$username = $_POST['username'];
+						$username = $_GET['username'];
 						echo "This username ".$username." does not exist in our database";
 						
 					}
