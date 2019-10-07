@@ -1,11 +1,3 @@
-<?php
-	$message = "";
-	if(isset($_POST['submit']))
-	{ //check if form was submitted
-		$username = $_POST['username'];
-		$message = "".$username." exists!";
-	}	
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,12 +18,22 @@
 			<div id="main">
 				<h1><u><b>Find a friend</b></u></h1>
 				<p>You can insert a username of someone you know and we will search if they are in our system.</p>
-				<?php echo $message; ?>
-				<form action = "searchstatusprocess.php" method ="get">
-					<h3>User: <input type="text" name="username"><br>
-					<input type="submit" name="submit" value="search"><br>
-				</form>
-				</div><!--main-->
+				<?php
+					if(isset($_POST['submit']))
+					{ //check if form was submitted
+						$username = $_POST['username'];
+						echo "This username ".$username." does not exist in our database";
+						
+					}
+					else
+					{
+						echo "<form action = '' method ='get'>";
+						echo "<h3>Username: <input type='text' name='username'><br>";
+						echo "<input type='submit' name='submit'><br>";
+						echo "</form>";
+					}		
+				?>
+			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
 			</div><!--footer-->
