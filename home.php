@@ -19,13 +19,12 @@
 				<h1><u><b>Plant A Tree</b></u></h1>
 				<p>This is a website is in testing that allows the purchase of trees through an account.</p>
 				<?php
-					$message = "";
 					if(isset($_POST['submit']))
 					{ //check if form was submitted
 						$username = $_POST['username'];
 						$password = $_POST['password'];
-						$message = "You have logged in succesfully, welcome back ".$username;
-						echo $message; 
+						echo "You have logged in succesfully, welcome back ".$username;
+						
 					}
 					else
 					{
@@ -37,7 +36,7 @@
 							$city = $_POST['city'];
 							$postcode = $_POST['postcode'];
 							$phone = $_POST['phone'];
-							$message = "You have registered an account succesfully, please login below ".$username;
+						echo "You have registered an account succesfully, please login below ".$username."<br>";
 						}
 						echo "<h1>Login</h1>";
 						echo "<form action = '' method ='post'>";
