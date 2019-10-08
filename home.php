@@ -17,7 +17,7 @@
 			</div><!--menu-->
 			<div id="main">
 				<h1><u><b>Plant A Tree</b></u></h1>
-				<p>This is a website is in testing that allows the purchase of trees through an account.</p>
+				<h2>This is a website that is in testing that allows the purchase of trees through an account.</h2>
 				<?php
 					if(isset($_POST['submit']))
 					{ //check if form was submitted
