@@ -22,7 +22,7 @@
 					if(isset($_GET['submit']))
 					{ //check if form was submitted
 						$username = $_GET['username'];
-						echo "This username ".$username." does not exist in our database";
+						echo "This username ".$username." does exist!";
 						
 					}
 					else
