@@ -18,8 +18,9 @@
 				<a href="fill.php"><img src="images/fill.jpg" width="140" height="180" alt="Top 10" /></a>
 			</div><!--menu-->
 			<div id="main">
-				<h1><u><b>Fill page</b></u></h1></div><!--main-->
+				<h1><u><b>Fill page</b></u></h1>
 				<p>This is a fill page to be used at a later date
+			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
 			</div><!--footer-->
