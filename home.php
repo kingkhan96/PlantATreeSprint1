@@ -23,7 +23,7 @@
 					{ //check if form was submitted
 						$username = $_POST['username'];
 						$password = $_POST['password'];
-						echo "You have logged in succesfully, welcome back ".$username;
+						echo "Login Failed, username/password is incorrect";
 						
 					}
 					else
