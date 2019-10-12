@@ -26,9 +26,10 @@ try{
   			`description` VARCHAR(60) NOT NULL,
   			`session_id` VARCHAR(255),
   			PRIMARY KEY (`id`))";
+	
 	mysqli_query($conn,$table_make);
 	
-	$table_make = "CREATE TABLE IF NOT EXIST `treedb` (
+	$table_make = "CREATE TABLE IF NOT EXISTS `treedb` (
   			`id` INT(11) NOT NULL AUTO_INCREMENT,
  			`tree` VARCHAR(60) NOT NULL,
   			`price` int(60) NOT NULL,
