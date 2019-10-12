@@ -37,6 +37,8 @@ try{
   			`category` VARCHAR(50) NOT NULL,
   			PRIMARY KEY (`id`))";
 	
+	mysqli_query($conn,$table_make);
+	
 	$check_user = mysqli_query($conn,"SELECT * FROM users WHERE session_id = '".session_id()."' LIMIT 1");
 	while ($row=mysqli_fetch_row($check_user)){
 				if(count($row) > 0) {
