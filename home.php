@@ -29,7 +29,7 @@ include('config.php');
 						$row=mysqli_fetch_row($user_results);
 						if(count($row) > 0) 
 						{
-							$echo "good";
+							echo "good";
 							$updateQuery = "
 								UPDATE users
 								SET session_id = '" .session_id(). "'
