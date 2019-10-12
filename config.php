@@ -20,26 +20,6 @@ try{
 }
 // LOG IN
 try{
-	$table_make = "CREATE TABLE IF NOT EXISTS `users` (
-  			`id` INT(11) NOT NULL AUTO_INCREMENT,
- 			`username` VARCHAR(60) NOT NULL,
-  			`description` VARCHAR(60) NOT NULL,
-  			`session_id` VARCHAR(255),
-  			PRIMARY KEY (`id`))";
-	
-	mysqli_query($conn,$table_make);
-	
-	$table_make = "CREATE TABLE IF NOT EXISTS `treedb` (
-  			`id` INT(11) NOT NULL AUTO_INCREMENT,
- 			`tree` VARCHAR(60) NOT NULL,
-  			`price` int(60) NOT NULL,
-  			`growth` int(60) NOT NULL,
-  			`condition` VARCHAR(50) NOT NULL,
-  			`category` VARCHAR(50) NOT NULL,
-  			PRIMARY KEY (`id`))";
-	
-	mysqli_query($conn,$table_make);
-	
 	$check_user = mysqli_query($conn,"SELECT * FROM users WHERE session_id = '".session_id()."' LIMIT 1");
 	while ($row=mysqli_fetch_row($check_user)){
 				if(count($row) > 0) {
