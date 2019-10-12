@@ -24,21 +24,22 @@ include('config.php');
 				<?php
 					if(isset($_POST['submit']))
 					{ 
+						echo "when in submit";
 						$user_results = mysqli_query($conn, "SELECT * FROM users WHERE username = '" .$logUsername. "' AND password = '" .$logPassword. "' LIMIT 1");
-						while ($row=mysqli_fetch_row($user_results))
+						$row=mysqli_fetch_row($user_results);
+						if(count($row) > 0) 
 						{
-							if(count($row) > 0) 
-							{
-								$updateQuery = "
-									UPDATE users
-									SET session_id = '" .session_id(). "'
-									WHERE user_id = '" .$row[0]. "'";
-					
-									mysqli_query($conn,$updateQuery);
-									exit;
-							}
-							else
-							{
+							$echo "good";
+							$updateQuery = "
+								UPDATE users
+								SET session_id = '" .session_id(). "'
+								WHERE user_id = '" .$row[0]. "'";
+				
+								mysqli_query($conn,$updateQuery);
+								exit;
+						}
+						else
+						{
 								echo "<h1>Login</h1>";
 								echo " Your username and password don't seem to match.";
 								echo "<form action = '' method ='post'>";
@@ -47,9 +48,9 @@ include('config.php');
 								echo "<input type='submit' name='submit'>";
 								echo "</form>" ;
 								echo "<a href='register.php'><p>register for an account here</p></a>";
-							}
+							exit;
 						}
-						
+												
 					}
 					else
 					{
