@@ -28,16 +28,16 @@ include('config.php');
 						$tree = $_POST['tree'];
 						$price = $_POST['price'];
 						$growth = $_POST['growth'];
-						$condition = $_POST['condition'];
+						$conditions = $_POST['condition'];
 						$category = $_POST['category'];
 						
-						$result = "INSERT INTO treedb(tree, price, growth, condition, category)
-								VALUES ('" .$tree. "', '".$price."','" .$growth. "','" .$condition. "','" .$category. "')";
+						$result = "INSERT INTO treedb(tree, price, growth, conditions, category)
+								VALUES ('" .$tree. "', '".$price."','" .$growth. "','" .$conditions. "','" .$category. "')";
 						
 						mysqli_query($conn, $result);
 						
 						$result = mysqli_query($conn, "SELECT * FROM treedb WHERE tree = '%" .$tree. "%' AND price = '%" .$price. "%' AND
-						growth = '%" .$growth. "%' AND condition = '" .$condition. "' AND category = '" .$category. "'");
+						growth = '%" .$growth. "%' AND conditions = '" .$conditions. "' AND category = '" .$category. "'");
 						
 						echo "These are all the trees we have in the database";
 						while ($row = mysqli_fetch_assoc($result)) //post all the trees that have the keyword
