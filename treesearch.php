@@ -24,16 +24,34 @@ include('config.php');
 				<?php
 					if(isset($_POST['submit']))
 					{
+						
 						$tree = $_POST['tree'];
-						echo "We have found 1 result: ".$tree."<br>";
-						echo "<a href='treesearch.php'>Click here to search for a different tree</a>";
+						$price = $_POST['price'];
+						$growth = $_POST['growth'];
+						$condition = $_POST['condition'];
+						$category = $_POST['category'];
+						
+						$result = "INSERT INTO users(tree, price, growth, condition, category)
+								VALUES ('" .$tree. "', '".$price."','" .$growth. "','" .$condition. "','" .$category. "')";
+						
+						mysqli_query($conn, $result);
+						
+						$result = mysqli_query($conn, "SELECT * FROM treedb WHERE tree = '%" .$tree. "%' AND price = '%" .$price. "%' AND
+						growth = '%" .$growth. "%' AND condition = '" .$condition. "' AND category = '" .$category. "'");
+						
+						echo "These are all the trees we have in the database";
+						while ($row = mysqli_fetch_assoc($result)) //post all the trees that have the keyword
+						{
+							echo "<h2>", $row["tree"],"</h2>";
+						}
+						echo "<a href='treesearch.php'>Click here to search for trees</a>";
 					}
 					else
 					{
 						echo "<form action='' method='post'>";
 						echo "<h3>Tree: <input type='text' name='tree'><br>";
-						echo "Min Price: <input type='text' name='price'><br>";
-						echo "Min Growth rate: <input type='text' name='growth'><br>";
+						echo "Price: <input type='text' name='price'><br>";
+						echo "Growth: <input type='text' name='growth'><br>";
 						echo "Condition: <input type='radio' name='condition' value='grass' checked='checked'>Grass";
 						echo "<input type='radio' name='condition' value='sand'>Sand </br>"; 
 						echo "Category: <input type='radio' name='category' value='tree' checked='checked'>Tree";						
