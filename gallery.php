@@ -21,6 +21,8 @@ include('config.php');
 			<div id="main">
 				<h1><u><b>Gallery</b></u></h1>
 				<p>Gallery of trees that are available
+					<a href="gallery.php"<img src="image/different-tree-types-drawn-shrub-different-tree-7-tree-types.jpg" width="160" height="160" /></a>
+					<a href="gallery.php"<img src="image/1d3086798bf3f7ba60bbfc944c6b43fa.jpg" width="160" height="160" /></a>
 			</div><!--main-->
 			<div id="footer">
 			<p>Software engineering 2019</p>
