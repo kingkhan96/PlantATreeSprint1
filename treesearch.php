@@ -44,7 +44,7 @@ include('config.php');
 						{
 							echo "<h2>", $row["tree"],"</h2>";
 						}
-						echo "<a href='treesearch.php'>Click here to search for trees</a>";
+						echo "<br><a href='treesearch.php'>Click here to search for more trees</a>";
 					}
 					else
 					{
