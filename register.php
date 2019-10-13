@@ -16,7 +16,7 @@ include('config.php');
 				<a href="home.php"><img src="images/Home.jpg" width="140" height="180" alt="Home" /></a>
 				<a href="treesearch.php"><img src="images/treesearch.jpg" width="140" height="180" alt="treesearch" /></a>
 				<a href="findafriend.php"><img src="images/findafriend.jpg" width="140" height="180" alt="findafriend" /></a>
-				<a href="fill.php"><img src="images/fill.jpg" width="140" height="180" alt="Top 10" /></a>
+				<a href="gallery.php"><img src="images/gallery.jpg" width="140" height="180" alt="Top 10" /></a>
 			</div><!--menu-->
 			<div id="main">
 				<h1>Register</h1>
