@@ -23,8 +23,7 @@ include('config.php');
 				<h2>This is a website that is in testing that allows the purchase of trees through an account.</h2>
 				<?php
 					if(isset($_POST['submit']))
-					{ 
-						echo "when in submit";
+					{
 						$user_results = mysqli_query($conn, "SELECT * FROM users WHERE username = '" .$logUsername. "' AND password = '" .$logPassword. "' LIMIT 1");
 						$row=mysqli_fetch_row($user_results);
 						if(count($row) > 0) 
@@ -36,7 +35,8 @@ include('config.php');
 								WHERE user_id = '" .$row[0]. "'";
 				
 								mysqli_query($conn,$updateQuery);
-								exit;
+							echo "You have logged in!";
+							exit;
 						}
 						else
 						{
