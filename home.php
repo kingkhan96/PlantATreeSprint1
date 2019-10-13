@@ -55,8 +55,12 @@ include('config.php');
 						if(isset($_POST['register']))
 						{
 							$username = $_POST['username'];
-							$password = $_POST['password'];	
-						echo "You have registered an account succesfully, please login below ".$username."<br>";
+							$password = $_POST['password'];
+							$insertQuery = "
+									INSERT INTO users(username, password)
+									VALUES ('" .$username. "', '".$password."')";
+							mysqli_query($conn, $insertQuery);
+							echo "You have registered an account succesfully, please login below ".$username."<br>";
 						}
 						echo "<h1>Login</h1>";
 						echo "<form action = '' method ='post'>";
