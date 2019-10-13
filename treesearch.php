@@ -31,11 +31,6 @@ include('config.php');
 						$conditions = $_POST['condition'];
 						$category = $_POST['category'];
 						
-						$result = "INSERT INTO treedb(tree, price, growth, conditions, category)
-								VALUES ('" .$tree. "', '".$price."','" .$growth. "','" .$conditions. "','" .$category. "')";
-						
-						mysqli_query($conn, $result);
-						
 						$result = mysqli_query($conn, "SELECT * FROM treedb WHERE tree LIKE '%" .$tree. "%' AND price LIKE '%" .$price. "%' AND
 						growth LIKE '%" .$growth. "%' AND conditions LIKE '" .$conditions. "' AND category LIKE '" .$category. "'");
 						
