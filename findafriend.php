@@ -25,7 +25,18 @@ include('config.php');
 					if(isset($_GET['submit']))
 					{ //check if form was submitted
 						$username = $_GET['username'];
-						echo "This username ".$username." does exist!";
+						
+						$user_results = mysqli_query($conn, "SELECT * FROM users WHERE username = '" .$username. "'");
+						
+						$row=mysqli_fetch_row($user_results);
+						if(count($row) > 0) 
+						{
+							echo "The Username ".$username." does exist!";
+						}
+						else
+						{
+							echo "The Username ".$username." does not exist!";
+						}
 						
 					}
 					else
