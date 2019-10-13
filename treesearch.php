@@ -36,8 +36,8 @@ include('config.php');
 						
 						mysqli_query($conn, $result);
 						
-						$result = mysqli_query($conn, "SELECT * FROM treedb WHERE tree = '%" .$tree. "%' AND price = '%" .$price. "%' AND
-						growth = '%" .$growth. "%' AND conditions = '" .$conditions. "' AND category = '" .$category. "'");
+						$result = mysqli_query($conn, "SELECT * FROM treedb WHERE tree LIKE '%" .$tree. "%' AND price LIKE '%" .$price. "%' AND
+						growth LIKE '%" .$growth. "%' AND conditions LIKE '" .$conditions. "' AND category LIKE '" .$category. "'");
 						
 						echo "These are all the trees we have in the database";
 						while ($row = mysqli_fetch_assoc($result)) //post all the trees that have the keyword
