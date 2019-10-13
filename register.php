@@ -19,7 +19,7 @@ include('config.php');
 				<a href="fill.php"><img src="images/fill.jpg" width="140" height="180" alt="Top 10" /></a>
 			</div><!--menu-->
 			<div id="main">
-				<h1>Login</h1>
+				<h1>Register</h1>
 				<form action = 'home.php' method ='post'>
 					<h3>Username: <input type='text' name='username'><br>
 					Password:     <input type='text' name='password'><br>
