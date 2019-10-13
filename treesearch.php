@@ -31,7 +31,7 @@ include('config.php');
 						$condition = $_POST['condition'];
 						$category = $_POST['category'];
 						
-						$result = "INSERT INTO users(tree, price, growth, condition, category)
+						$result = "INSERT INTO treedb(tree, price, growth, condition, category)
 								VALUES ('" .$tree. "', '".$price."','" .$growth. "','" .$condition. "','" .$category. "')";
 						
 						mysqli_query($conn, $result);
