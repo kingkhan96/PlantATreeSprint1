@@ -21,8 +21,8 @@ include('config.php');
 			<div id="main">
 				<h1>Register</h1>
 				<form action = 'home.php' method ='post'>
-					<h3>Username: <input type='text' name='username'><br>
-					Password:     <input type='text' name='password'><br>
+					<h3>Username: <input type='text' name='username'></h3><br>
+					<h3>Password:     <input type='text' name='password'></h3><br>
 					<input type='submit' name='register'>
 				</form>
 			</div><!--main-->
