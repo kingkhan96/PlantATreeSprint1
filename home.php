@@ -24,7 +24,7 @@ include('config.php');
 				<?php
 					if(isset($_POST['submit']))
 					{
-						$user_results = mysqli_query($conn, "SELECT * FROM users WHERE username = '" .$logUsername. "' AND password = '" .$logPassword. "' LIMIT 1");
+						$user_results = mysqli_query($conn, "SELECT * FROM users WHERE username = '" .$username. "' AND password = '" .$password. "' LIMIT 1");
 						$row=mysqli_fetch_row($user_results);
 						if(count($row) > 0) 
 						{
