@@ -36,7 +36,6 @@ include('config.php');
 				
 								mysqli_query($conn,$updateQuery);
 							echo "You have logged in!";
-							exit;
 						}
 						else
 						{
@@ -48,7 +47,6 @@ include('config.php');
 								echo "<input type='submit' name='submit'>";
 								echo "</form>" ;
 								echo "<a href='register.php'><p>register for an account here</p></a>";
-							exit;
 						}
 												
 					}
